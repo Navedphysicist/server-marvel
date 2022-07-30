@@ -1,6 +1,6 @@
 const  {connect,db}  = require('./configs/db')
 const app = require('./index')
-const PORT = 7000
+const PORT = process.env.PORT  || 7000
 
 app.listen(PORT,()=>{
 try{ 

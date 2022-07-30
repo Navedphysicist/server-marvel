@@ -4,7 +4,7 @@ require('dotenv/config')
 
 const generateToken = (UserData)=>{
  
-     const token = jwt.sign({id:UserData._id},process.env.JWT_SECRET_KEY,{expiresIn:"7d"})
+     const token = jwt.sign({id:UserData._id},'JWT_SECRET_KEY',{expiresIn:"7d"})
      return token;
 
 
@@ -12,7 +12,7 @@ const generateToken = (UserData)=>{
 
 const verifyToken = (token)=>{
 
-    const decode = jwt.verify(token,process.env.JWT_SECRET_KEY)
+    const decode = jwt.verify(token,'JWT_SECRET_KEY')
     return decode;
 }
 

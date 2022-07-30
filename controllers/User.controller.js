@@ -25,7 +25,7 @@ const signup = async (req, res) => {
   try {
     const token = generateToken(UserData);
     res.cookie("token", token, {
-      httpOnly: true,
+      // httpOnly: true,
     });
 
     return res.status(201).json({ UserData });
@@ -61,7 +61,7 @@ const signin = async (req, res) => {
     const token = generateToken(UserData);
 
     res.cookie("token", token, {
-      httpOnly: true,
+      // httpOnly: true,
     });
 
     return res.status(201).json({ UserData });

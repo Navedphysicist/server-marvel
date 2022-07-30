@@ -25,8 +25,10 @@ const signup = async (req, res) => {
   try {
     const token = generateToken(UserData);
     res.cookie("token", token, {
+      sameSite:"none",
       httpOnly: true,
-      secure:true,
+      secure:true ,
+      domain:"http://localhost:3000"
     })
 
     return res.status(201).json({ UserData });
@@ -62,8 +64,10 @@ const signin = async (req, res) => {
     const token = generateToken(UserData);
 
     res.cookie("token", token, {
+      sameSite:"none",
       httpOnly: true,
-      secure:true  
+      secure:true ,
+      domain:"http://localhost:3000"
     });
 
     return res.status(201).json({ UserData ,token});

@@ -5,8 +5,8 @@ const { verifyToken } = require('../controllers/token.controller')
 const protect = async (req, res, next) => {
 
     // const token = req.cookies.token
-    const token = req?.headers?.Authorization
-
+    const token = req?.headers?.authorization
+//    console.log(req.headers)
      
     console.log(token,"token")
 

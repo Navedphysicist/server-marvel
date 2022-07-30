@@ -1,0 +1,77 @@
+  
+
+        <--------------USER-ROUTES----------------->
+
+ 1.) Signup  ----> http://localhost:7000/user    ==>POST
+   body==>
+   {
+        "firstName":"Naved",
+        "lastName":"Khan",
+        "email":"naved@gmail.com",
+        "password":"naved123",
+        "imgUrl":"https://pps.whatsapp.net/v/t61.24694-24/204315142_102564372170362_6423959485006630113_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AVyJUCHVJOVHbDSeibnDLKbihxICgCNWWR_U8Z0z82LRTQ&oe=62EFB25D"
+
+    }
+
+2. Signin  ----> http://localhost:7000/user/signin   ==>  POST
+ body==>
+   {
+        "email":"naved@gmail.com",
+        "password":"naved123",
+    }
+
+    --------------------------------------------------------------------------
+3.) Signout  ----> http://localhost:7000/user/signout    ==> POST
+  --------------------------------------------------------------------------
+
+4.) getUser  ----> http://localhost:7000/user/:userId    ==> GET
+ --------------------------------------------------------------------------
+
+5.) getUser  ----> http://localhost:7000/user/:userId    ==> GET
+ --------------------------------------------------------------------------
+6.) checkUser ----> http://localhost:7000/user/check  ==> POST
+
+body=> {email}
+
+ --------------------------------------------------------------------------
+6.) get specific user ----> http://localhost:7000/user/userbyid/:id  ==> get
+
+body=> {email}
+        <--------------CHAT-ROUTES----------------->
+
+  1.) createChat  ---->     ==>POST
+   body==>
+    {
+       userId:""
+       receiverId:""
+    }
+
+2. getUserChats  ----> http://localhost:7000/chat/:userId   ==>  GET
+
+    --------------------------------------------------------------------------
+3.) getChat  ----> http://localhost:7000/chat/find/:userId/receiverId    ==> GET
+  --------------------------------------------------------------------------
+
+
+    <--------------CHAT-ROUTES----------------->
+
+1.) getUser  ----> http://localhost:7000/user/:userId    ==> GET
+ --------------------------------------------------------------------------
+
+2.) getUser  ----> http://localhost:7000/user/:userId    ==> GET
+ -----------
+ 
+  <--------------MESSAGE-ROUTES----------------->
+
+1.) createMessage ---->   http://localhost:7000/msg/   ==>POST
+ body==>
+    {   
+       message:
+       userId:""
+       chatId:""
+    }
+
+2.) getMessage ---->   http://localhost:7000/msg/:chatId   ==> GET
+
+
+

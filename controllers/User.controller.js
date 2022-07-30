@@ -27,7 +27,7 @@ const signup = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure:true,
-    });
+    })
 
     return res.status(201).json({ UserData });
   } catch (err) {
@@ -63,10 +63,10 @@ const signin = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure:true
+      secure:true  
     });
 
-    return res.status(201).json({ UserData });
+    return res.status(201).json({ UserData ,token});
   } catch (err) {
     return res.status(500).send({ err: err.message });
   }
